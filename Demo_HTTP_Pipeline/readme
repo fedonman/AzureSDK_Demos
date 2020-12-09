@@ -1,0 +1,6 @@
+<!-- Create a resource group -->
+az group create --name itprodev2020 --location westeurope
+
+<!-- Create a storage account -->
+az storage account create --name itprodev2020storage --resource-group itprodev2020 --location westeurope --sku Standard_LRS
+
