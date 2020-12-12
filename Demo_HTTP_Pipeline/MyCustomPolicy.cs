@@ -9,6 +9,9 @@ using System.Threading.Tasks;
 
 namespace Demo_HTTP_Pipeline
 {
+    // To implement a policy create a class deriving from HttpPipelinePolicy and overide ProcessAsync and Process methods.
+    // Request can be acessed via message.Request.
+    // Response is accessible via message.Response but only after ProcessNextAsync/ProcessNext was called.
     public class MyCustomPolicy : HttpPipelinePolicy
     {
         public override void Process(HttpMessage message, ReadOnlyMemory<HttpPipelinePolicy> pipeline)
